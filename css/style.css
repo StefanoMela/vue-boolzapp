@@ -99,7 +99,7 @@ body {
 }
 
 
-.desktop-notifications {
+.desktop__notifications {
 
     height: 80px;
     width: 100%;
@@ -117,7 +117,7 @@ body {
 }
 
 
-.user-list {
+.user__list {
 
     height: 85px;
     width: 100%;
@@ -127,15 +127,17 @@ body {
     color: black;
 }
 
-.user-list>img {
+.user__list>img {
 
     max-width: 40px;
+    max-height: 40px;
     aspect-ratio: 1;
     border-radius: 50%;
+    align-self:flex-start;
 }
 
 
-.time-stamp {
+.time__stamp {
 
     position: absolute;
     left: 380px;
@@ -143,6 +145,30 @@ body {
     color:#020101c5
 }
 
-.last-message {
+.last__message {
     color:#020101c5
+}
+
+.user__info {
+
+    position: fixed;
+    height: 80px;
+    width: calc(100% - 685px);
+    background-color: rgba(86, 83, 83, 0.664);
+}
+
+.chat__field {
+
+    background-color: red;
+    height: calc(100% - 160px);
+    width: 100px;
+}
+
+.chat__inputs {
+
+    height: 80px;
+    border: 1px solid black;
+    align-self: flex-end;
+    width: 100px;
+    background-color: grey;
 }

@@ -23,19 +23,23 @@
         <div class="topper"></div>
         <div class="whatsapp d-flex" id="app">
             <div class="sidebar d-flex flex-column">
-                <div class="desktop-notifications">
+                <div class="desktop__notifications">
                     <i class="bi bi-bell-slash align-self-start"></i>
                     <h4>Ricevi notifiche di nuovi messaggi</h4>
                     <span>Attiva notifiche desktop</span>
                 </div>
                 <ul>
-                    <li v-for="(contact, index) in contacts" class="user-list"> <img :src=contact.avatar alt=""> {{ contact.name }} <br> <span class="last-message">Ultimo messaggio inviato</span><span class="time-stamp">12:00</span></li>
+                    <li v-for="(contact, index) in contacts" class="user__list"> <img :src=contact.avatar alt=""> {{ contact.name }} <br> <span class="last__message">Ultimo messaggio inviato</span><span class="time__stamp">12:00</span></li>
                 </ul>
             </div>
-            <div class="chat-field d-flex">
-                <div class="user-info d-flex flex-column">
+            <div class="chat-wrapper d-flex">
+                <div class="user__info">
                     <h4>Nome</h4>
                     <h5>Ultimo accesso</h5>
+                </div>
+                <div class="chat__field"></div>
+                <div class="chat__inputs">
+                    
                 </div>
             </div>
         </div>

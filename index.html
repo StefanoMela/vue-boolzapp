@@ -20,26 +20,65 @@
 
 <body>
     <div class="wrapper">
-        <div class="topper"></div>
         <div class="whatsapp d-flex" id="app">
             <div class="sidebar d-flex flex-column">
-                <div class="desktop__notifications">
-                    <i class="bi bi-bell-slash align-self-start"></i>
-                    <h4>Ricevi notifiche di nuovi messaggi</h4>
-                    <span>Attiva notifiche desktop</span>
+                <div class="user__lobby d-flex justify-content-between p-2">
+                    <div class="personal__info">
+                        <div class="personal__info__image">
+                            <img :src="contacts[0].avatar" alt="">
+                        </div>
+                        <div class="personal__info__name mx-2">
+                            <h4>Stefano</h4>
+                        </div>
+                    </div>
+                    <div class="user__icons">
+                        <i class="bi bi-bell-slash"></i>
+                        <i class="bi bi-bell-slash"></i>
+                        <i class="bi bi-bell-slash"></i>
+                    </div>
                 </div>
-                <ul>
-                    <li v-for="(contact, index) in contacts" class="user__list"> <img :src=contact.avatar alt=""> {{ contact.name }} <br> <span class="last__message">Ultimo messaggio inviato</span><span class="time__stamp">12:00</span></li>
-                </ul>
+                <div class="desktop__notifications d-flex justify-content-between">
+                    <div class="icon__container p-3">
+                        <i class="bi bi-bell-slash notification__bell"></i>
+                    </div>
+                    <div class="notification__container p-3 d-flex flex-column">
+                        <span>Ricevi notifiche di nuovi messaggi</span>
+                        <a class="notification__link">Attiva notifiche desktop</a>
+                    </div>
+                </div>
+                <div class="global__chat__container">
+                    <ul>
+                        <li v-for="(contact, index) in contacts" class="contact__list">
+                            <div class="contact__img__container">
+                                <img :src=contact.avatar alt="">
+                            </div>
+                            <div class="contact__msg__info">
+                                {{ contact.name }}
+                                <span class="last__message">Ultimo messaggio inviato</span>
+                            </div>
+                            <div class="time__stamp">
+                                <span>12:00</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="chat-wrapper d-flex">
-                <div class="user__info">
+            <div class="chat-wrapper">
+                <div class="contact__info">
                     <h4>Nome</h4>
                     <h5>Ultimo accesso</h5>
                 </div>
+
                 <div class="chat__field"></div>
+
                 <div class="chat__inputs">
-                    
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Recipient's username"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">Button</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

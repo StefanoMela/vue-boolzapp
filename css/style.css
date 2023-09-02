@@ -194,3 +194,14 @@ body{
     background-color: rgba(205, 197, 197, 0.786);
     padding: 10px;
 }
+
+
+.sent {
+
+    background-color: rgb(37, 211, 102);
+
+}
+
+.received {
+    background-color: rgba(255, 255, 255, 0.895);
+}

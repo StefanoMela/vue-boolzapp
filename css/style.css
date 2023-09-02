@@ -177,8 +177,8 @@ body{
 .contact__info {
 
     background-color: rgba(86, 83, 83, 0.664);
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    padding-left: 10px;
+    padding-top: 10px;
 }
 
 .chat__field {
@@ -190,9 +190,7 @@ body{
 
 .chat__inputs {
 
-    border: 1px solid black;
+    border-top: 1px solid black;
     background-color: rgba(205, 197, 197, 0.786);
     padding: 10px;
-    border-radius: 5px;
-
 }

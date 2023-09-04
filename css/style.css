@@ -212,8 +212,6 @@ body {
 
     background-image: url('/img/mine.jpg');
     height: 100%;
-    display: flex; 
-    justify-content: space-between; 
     padding: 1.5rem;
     overflow: auto;
 
@@ -244,6 +242,14 @@ body {
 .received {
     background-color: rgba(255, 255, 255, 0.895);
 }
+
+.message__date{
+
+    font-size: smaller;
+    color: rgba(128, 128, 128, 0.779);
+    align-self: flex-end;
+}
+
 
 .bottom__bar__inputs {
 

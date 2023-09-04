@@ -150,14 +150,18 @@ body {
     overflow: scroll;
 }
 
-.contact__list {
+.contacts__list {
 
-    height: 85px;
-    border-top: 1px solid black;
-    color: black;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contact__item {
+
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    gap: .5rem;
 }
 
 .contact__msg__info {
@@ -175,8 +179,6 @@ body {
 .time__stamp {
 
     font-size: smaller;
-    padding-top: 5px;
-    align-self: flex-start;
 }
 
 .chat-wrapper {
@@ -218,7 +220,6 @@ body {
 }
 
 .messages {
-    flex-grow: 1;
     padding: 0.5rem;
 
     display: flex;
@@ -257,3 +258,4 @@ body {
     background-color: rgba(205, 197, 197, 0.786);
     padding: 10px;
 }
+

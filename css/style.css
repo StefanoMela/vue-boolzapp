@@ -198,9 +198,8 @@ body {
 
 .contact__info {
 
-    background-color: rgba(86, 83, 83, 0.664);
-    padding-left: 10px;
-    padding-top: 10px;
+    background-color: rgba(91, 91, 91, 0.55);
+    padding: 4px;
     align-items: center;
     justify-content: space-between;
 }

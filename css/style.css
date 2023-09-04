@@ -1,7 +1,6 @@
 /* ! Reset */
 body,
 html {
-    font-family: 'Intro', Arial, Helvetica, sans-serif;
     font-size: 16px;
     box-sizing: border-box;
     margin: 0;
@@ -68,9 +67,11 @@ a {
 
 /* ! Style */
 
-body{
+body {
 
     background-color: #ece5dd;
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(180deg, rgba(0, 150, 136, 1) 20%, rgba(227, 225, 220, 1) 20%, rgba(209, 215, 219, 1) 100%);
 
 }
 
@@ -95,6 +96,7 @@ body{
     width: 350px;
     border-right: 1px solid black;
     background-color: rgba(252, 252, 252, 0.802);
+    cursor: pointer;
 
 }
 
@@ -109,6 +111,18 @@ body{
     align-items: baseline;
 }
 
+.user__icons {
+
+    display: flex;
+    align-items: center;
+}
+
+.user__icons>i {
+
+    display: inline-block;
+    margin: 0 .3rem;
+}
+
 .desktop__notifications {
 
     background-color: rgba(9, 135, 209, 0.417);
@@ -117,13 +131,14 @@ body{
 
 .notification__bell {
 
-    font-size: 2rem;
-    color:  rgba(9, 135, 209, 0.417);;
+    font-size: 1.5rem;
+    color: rgba(9, 135, 209, 0.417);
+    ;
     background-color: white;
     border-radius: 50%;
 }
 
-.notification__link{
+.notification__link {
 
     color: grey;
     text-decoration: underline;
@@ -137,9 +152,7 @@ body{
 
 .contact__list {
 
-    cursor: pointer;
     height: 85px;
-    width: 100%;
     border-top: 1px solid black;
     color: black;
     display: flex;
@@ -155,7 +168,7 @@ body{
 
 .last__message {
 
-    color:#020101c5;
+    color: #020101c5;
     font-size: smaller;
 }
 
@@ -171,6 +184,13 @@ body{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    overflow: hidden;
+}
+
+.user__contact__icons>i {
+
+    display: inline-block;
+    margin: 0 .3rem;
 }
 
 
@@ -179,29 +199,43 @@ body{
     background-color: rgba(86, 83, 83, 0.664);
     padding-left: 10px;
     padding-top: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user__contact__container {
+
+    align-items: center;
 }
 
 .chat__field {
 
     background-image: url('/img/mine.jpg');
-    background-size: cover;
     height: 100%;
+    display: flex; 
+    justify-content: space-between; 
+    padding: 1.5rem;
+
 }
 
-.chat__inputs {
-
-    border-top: 1px solid black;
-    background-color: rgba(205, 197, 197, 0.786);
-    padding: 10px;
+.message {
+    max-width: 60%;
+    border-radius: 5px;
+    padding: 0.5rem;
+    align-self: flex-start;
 }
-
 
 .sent {
-
     background-color: rgb(37, 211, 102);
-
 }
 
 .received {
     background-color: rgba(255, 255, 255, 0.895);
+}
+
+.bottom__bar__inputs {
+
+    border-top: 1px solid black;
+    background-color: rgba(205, 197, 197, 0.786);
+    padding: 10px;
 }

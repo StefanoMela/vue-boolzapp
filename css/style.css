@@ -282,6 +282,11 @@ body {
     align-self: flex-start;
 }
 
+.dropdown-toggle{
+
+    display: inline-flex;
+}
+
 .sent {
     background-color: rgb(37, 211, 102);
     align-self: flex-end;

@@ -17,6 +17,7 @@
     <!-- JS -->
     <script src="./js/contacts.js"></script>
     <script src="./js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
     <title>BoolzApp</title>
 </head>
 
@@ -93,15 +94,18 @@
                         <i class="bi bi-three-dots-vertical"></i>
                     </div>
                 </div>
-
                 <div class="chat__field">
                     <div class="messages">
-                        <div v-for="(message, status) in contacts[activeUser].messages" class="message"
+                        <div v-for="(message, index) in contacts[activeUser].messages" class="message"
                             :class="message.status">
                             {{ message.message }}
-                            <span class="message__date"> 
-                                {{msgTime}} {{msgDate}} 
-
+                            <span class="message__date">
+                                {{msgTime}} {{msgDate}}
+                                <div class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <ul class="dropdown-menu">
+                                      <li @click="removeItem(index)"><a class="dropdown-item" href="#">Cancella messaggio</a></li>
+                                    </ul>
+                                </div>
                             </span>
                         </div>
                     </div>

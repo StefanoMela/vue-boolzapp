@@ -6,7 +6,7 @@ const msgTime = DateTime.now().toLocaleString(DateTime.TIME_SIMPLE);
 
 const msgDate = DateTime.now().toLocaleString(DateTime.DATE_SHORT);
 
-console.log(msgTime , msgDate);
+console.log(msgTime, msgDate);
 
 
 
@@ -17,7 +17,7 @@ createApp({
   data() {
     return {
       contacts,
-      
+
 
       msgTime: msgTime,
       msgDate: msgDate,
@@ -46,24 +46,24 @@ createApp({
 
       let toWrite = { ...this.newMessage };
 
-      if (this.newMessage.message.length > 1){
+      if (this.newMessage.message.length > 1) {
         this.contacts[this.activeUser].messages.push(toWrite);
         this.newMessage.message = "";
 
         setTimeout(this.addReply, 1000)
       };
-  },
+    },
     addReply() {
 
       this.contacts[this.activeUser].messages.push(this.newReply)
 
     },
 
-    checkString () {
+    checkString() {
 
       for (const searchedUser of this.contacts) {
 
-        if(!searchedUser.name.toLowerCase().includes(this.searchedTxt.toLowerCase())) {
+        if (!searchedUser.name.toLowerCase().includes(this.searchedTxt.toLowerCase())) {
 
           searchedUser.visible = false;
 
@@ -74,10 +74,13 @@ createApp({
       }
     },
 
-    randomTime() {
+    removeItem(index) {
 
-      let rndTime 
+      this.contacts[this.activeUser].messages.splice(index, 1);
 
     },
-    }
+
+
+
+  }
 }).mount('#app')

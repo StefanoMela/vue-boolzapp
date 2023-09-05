@@ -1,5 +1,14 @@
 var DateTime = luxon.DateTime;
 
+const now = DateTime.now();
+
+let msgTime = DateTime.now().toLocaleString(DateTime.TIME_SIMPLE);
+
+let msgDate = DateTime.now().toLocaleString(DateTime.DATE_SHORT);
+
+console.log(msgTime , msgDate);
+
+
 const { createApp } = Vue
 
 createApp({
@@ -7,6 +16,10 @@ createApp({
     return {
       contacts,
       
+
+      msgTime: msgTime,
+      msgDate: msgDate,
+
       activeUser: 0,
 
       searchedTxt: "",
@@ -47,7 +60,7 @@ createApp({
     checkString () {
 
       for (const searchedUser of this.contacts) {
-        
+
         if(!searchedUser.name.toLowerCase().includes(this.searchedTxt.toLowerCase())) {
 
           searchedUser.visible = false;
@@ -57,9 +70,12 @@ createApp({
           searchedUser.visible = true;
         }
       }
+    },
+
+    randomTime() {
+
+      let rndTime 
+
+    },
     }
-  }
 }).mount('#app')
-
-
-// prendere stringa - includere stringa cercata - se non è inclusa false 

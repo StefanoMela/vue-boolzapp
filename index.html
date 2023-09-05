@@ -51,17 +51,13 @@
                 <div class="contact-search border-bottom p-1">
                     <div class="input-group">
                         <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
-                        <input v-model="searchedTxt"
-                        @keyup="checkString()"
-                         type="text" class="form-control" aria-describedby="basic-addon1">
+                        <input v-model="searchedTxt" @keyup="checkString()" type="text" class="form-control"
+                            aria-describedby="basic-addon1">
                     </div>
                 </div>
                 <div class="global__chat__container">
                     <ul class="contacts__list">
-                        <li 
-                        v-for="(contact, index) in contacts" @click="activeUser = index"
-                        v-show="contact.visible"
-                        >
+                        <li v-for="(contact, index) in contacts" @click="activeUser = index" v-show="contact.visible">
                             <div class="contact__item">
                                 <div class="contact__img__container">
                                     <img :src=contact.avatar alt="">
@@ -72,7 +68,9 @@
                                 </div>
                             </div>
                             <div class="time__stamp">
-                                <span>12:00</span>
+                                <span>{{ msgTime }}</span>
+                                <br>
+                                <span>{{ msgDate }}</span>
                             </div>
                         </li>
                     </ul>

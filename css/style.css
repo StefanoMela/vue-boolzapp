@@ -291,6 +291,27 @@ body {
     background-color: rgba(255, 255, 255, 0.895);
 }
 
+.dropdown {
+
+   position: absolute;
+}
+
+.dropdown.sent {
+
+    color: red;
+}
+
+.dropdown.received {
+
+color: blue;
+}
+
+/* 
+.dropdown__show {
+
+    display: block;
+} */
+
 .message__date{
 
     font-size: smaller;

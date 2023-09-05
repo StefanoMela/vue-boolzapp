@@ -284,7 +284,13 @@ body {
 
 .dropdown-toggle{
 
+    display: none;
+}
+
+.message:hover .dropdown-toggle {
+
     display: inline-flex;
+    z-index: 1;
 }
 
 .sent {

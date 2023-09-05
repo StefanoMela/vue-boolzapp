@@ -2,11 +2,13 @@ var DateTime = luxon.DateTime;
 
 const now = DateTime.now();
 
-let msgTime = DateTime.now().toLocaleString(DateTime.TIME_SIMPLE);
+const msgTime = DateTime.now().toLocaleString(DateTime.TIME_SIMPLE);
 
-let msgDate = DateTime.now().toLocaleString(DateTime.DATE_SHORT);
+const msgDate = DateTime.now().toLocaleString(DateTime.DATE_SHORT);
 
 console.log(msgTime , msgDate);
+
+
 
 
 const { createApp } = Vue

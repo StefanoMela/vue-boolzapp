@@ -99,7 +99,10 @@
                         <div v-for="(message, status) in contacts[activeUser].messages" class="message"
                             :class="message.status">
                             {{ message.message }}
-                            <span class="message__date"> {{msgTime}} {{msgDate}} </span>
+                            <span class="message__date"> 
+                                {{msgTime}} {{msgDate}} 
+
+                            </span>
                         </div>
                     </div>
                 </div>

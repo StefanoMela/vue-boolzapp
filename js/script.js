@@ -1,3 +1,5 @@
+var DateTime = luxon.DateTime;
+
 const { createApp } = Vue
 
 createApp({
@@ -6,6 +8,8 @@ createApp({
       contacts,
       
       activeUser: 0,
+
+      searchedTxt: "",
 
       newMessage: {
         date: '04/09/2023 16:30:00',
@@ -18,6 +22,7 @@ createApp({
         message: 'Ok!',
         status: 'received'
       },
+
     }
   },
   methods: {
@@ -38,5 +43,23 @@ createApp({
       this.contacts[this.activeUser].messages.push(this.newReply)
 
     },
+
+    checkString () {
+
+      for (const searchedUser of this.contacts) {
+        
+        if(!searchedUser.name.toLowerCase().includes(this.searchedTxt.toLowerCase())) {
+
+          searchedUser.visible = false;
+
+        } else {
+
+          searchedUser.visible = true;
+        }
+      }
+    }
   }
 }).mount('#app')
+
+
+// prendere stringa - includere stringa cercata - se non è inclusa false 

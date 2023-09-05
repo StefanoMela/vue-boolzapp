@@ -17,7 +17,9 @@
     <!-- JS -->
     <script src="./js/contacts.js"></script>
     <script src="./js/script.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"
+        defer></script>
     <title>BoolzApp</title>
 </head>
 
@@ -101,9 +103,11 @@
                             {{ message.message }}
                             <span class="message__date">
                                 {{msgTime}} {{msgDate}}
-                                <div class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
                                     <ul class="dropdown-menu">
-                                      <li @click="removeItem(index)"><a class="dropdown-item" href="#">Cancella messaggio</a></li>
+                                        <li @click="removeItem(index)"><a class="dropdown-item" href="#">Cancella
+                                                messaggio</a></li>
                                     </ul>
                                 </div>
                             </span>
@@ -112,7 +116,7 @@
                 </div>
 
                 <div class="bottom__bar__inputs">
-                    <i class="bi bi-emoji-smile-fill"></i>
+                        <i class="bi bi-emoji-smile-fill"></i>
                     <div class="input-group">
                         <input v-model.trim="newMessage.message" @keyup.enter="addMesssage()" type="text"
                             class="form-control" placeholder="Scrivi un messaggio" aria-label="Scrivi un messaggio"

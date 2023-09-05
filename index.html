@@ -20,28 +20,28 @@
 
 <body>
     <div class="wrapper">
-        <div class="whatsapp d-flex" id="app">
-            <div class="sidebar d-flex flex-column">
-                <div class="user__lobby d-flex justify-content-between p-2">
+        <div class="whatsapp" id="app">
+            <div class="sidebar">
+                <div class="user__lobby">
                     <div class="personal__info">
                         <div class="personal__info__image">
                             <img :src="contacts[0].avatar" alt="">
                         </div>
-                        <div class="personal__info__name mx-2">
+                        <div class="personal__info__name">
                             <h4>Stefano</h4>
                         </div>
                     </div>
-                    <div class="user__icons py-2">
+                    <div class="user__icons">
                         <i class="bi bi-circle"></i>
                         <i class="bi bi-chat-right"></i>
                         <i class="bi bi-three-dots-vertical"></i>
                     </div>
                 </div>
-                <div class="desktop__notifications d-flex">
-                    <div class="icon__container p-3">
+                <div class="desktop__notifications">
+                    <div class="icon__container">
                         <i class="bi bi-bell-slash notification__bell"></i>
                     </div>
-                    <div class="notification__container p-3 d-flex flex-column">
+                    <div class="notification__container">
                         <span>Ricevi notifiche di nuovi messaggi</span>
                         <a class="notification__link">Attiva notifiche desktop</a>
                     </div>
@@ -72,14 +72,14 @@
                 </div>
             </div>
             <div class="chat-wrapper">
-                <div class="contact__info d-flex">
-                    <div class="user__contact__container d-flex px-2">
+                <div class="contact__info">
+                    <div class="user__contact__container">
                         <div class="user__contact__img">
                             <img :src="contacts[activeUser].avatar"></img>
                         </div>
-                        <div class="user__contact__name d-flex flex-column mx-2 ">
+                        <div class="user__contact__name">
                             <strong><span> {{ contacts[activeUser].name }}</span></strong>
-                            <span class="mb-1">Ultimo accesso oggi alle 12:00</span>
+                            <span>Ultimo accesso oggi alle 12:00</span>
                         </div>
                     </div>
                     <div class="user__contact__icons">
@@ -92,16 +92,17 @@
                 <div class="chat__field">
                     <div class="messages">
                         <div v-for="(message, status) in contacts[activeUser].messages"
-                            :class="(message.status == 'sent')  ?  'message sent' : 'message received' ">
-                            {{ message.message }}
+                        class="message"
+                        :class="message.status">
+                        {{ message.message }}
                             <span class="message__date">{{message.date}}</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="bottom__bar__inputs d-flex justify-content-between align-items-center ">
-                    <i class="bi bi-emoji-smile"></i>
-                    <div class="input-group w-75">
+                <div class="bottom__bar__inputs">
+                    <i class="bi bi-emoji-smile-fill"></i>
+                    <div class="input-group">
                         <input v-model.trim="newMessage.message" @keyup.enter="addMesssage()" type="text"
                             class="form-control" placeholder="Scrivi un messaggio" aria-label="Scrivi un messaggio"
                             aria-describedby="basic-addon2">

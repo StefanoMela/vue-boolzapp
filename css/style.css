@@ -89,6 +89,7 @@ body {
     height: 80vh;
     width: 90%;
     background-color: #ece5dd;
+    display: flex;
 }
 
 .sidebar {
@@ -97,11 +98,16 @@ body {
     border-right: 1px solid black;
     background-color: rgba(252, 252, 252, 0.802);
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 
 }
 
 .user__lobby {
 
+    display: flex; 
+    justify-content: space-between; 
+    padding: .5rem;
     background-color: rgba(91, 91, 91, 0.55);
 }
 
@@ -111,10 +117,16 @@ body {
     align-items: baseline;
 }
 
+.personal__info__name {
+
+    margin-inline: .5rem;
+}
+
 .user__icons {
 
     display: flex;
     align-items: center;
+    padding-inline: .5rem;
 }
 
 .user__icons>i {
@@ -126,7 +138,12 @@ body {
 .desktop__notifications {
 
     background-color: rgba(9, 135, 209, 0.417);
+    display: flex;
+}
 
+.icon__container {
+
+    padding: 1rem;
 }
 
 .notification__bell {
@@ -136,6 +153,13 @@ body {
     ;
     background-color: white;
     border-radius: 50%;
+}
+
+.notification__container {
+
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
 }
 
 .notification__link {
@@ -189,6 +213,35 @@ body {
 
 }
 
+.contact__info {
+
+    background-color: rgba(91, 91, 91, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user__contact__container {
+
+    display: flex;
+    align-items: center;
+    padding-inline: .5rem;
+
+}
+
+.user__contact__name {
+
+    display: flex;
+    flex-direction: column;
+    margin-inline: .5rem;
+}
+
+.user__contact__name > span {
+
+    margin-bottom: 1rem;
+}
+
+
 .user__contact__icons>i {
 
     display: inline-block;
@@ -196,24 +249,11 @@ body {
 }
 
 
-.contact__info {
-
-    background-color: rgba(91, 91, 91, 0.55);
-    padding: 4px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.user__contact__container {
-
-    align-items: center;
-}
-
 .chat__field {
 
     background-image: url('/img/mine.jpg');
     height: 100%;
-    padding: 1.5rem;
+    padding: .5rem;
     overflow: auto;
 
 }
@@ -253,8 +293,17 @@ body {
 
 .bottom__bar__inputs {
 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     border-top: 1px solid black;
     background-color: rgba(205, 197, 197, 0.786);
     padding: 10px;
 }
 
+.bottom__bar__inputs > .input-group {
+
+    flex-grow: 1; 
+    margin-inline: 2rem;
+}

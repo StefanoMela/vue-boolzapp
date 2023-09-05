@@ -178,7 +178,15 @@ body {
 
     display: flex;
     flex-direction: column;
+}
 
+.contacts__list>li {
+
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #dee2e6;
+    padding: .5rem;
 }
 
 .contact__item {

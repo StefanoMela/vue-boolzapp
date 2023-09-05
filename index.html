@@ -54,7 +54,7 @@
                 </div>
                 <div class="global__chat__container">
                     <ul class="contacts__list">
-                        <li v-for="(contact, index) in contacts" @click="activeUser = index" class="d-flex justify-content-between border-top p-2 " style="height: 80px">
+                        <li v-for="(contact, index) in contacts" @click="activeUser = index">
                             <div class="contact__item">
                                 <div class="contact__img__container">
                                     <img :src=contact.avatar alt="">
@@ -91,10 +91,9 @@
 
                 <div class="chat__field">
                     <div class="messages">
-                        <div v-for="(message, status) in contacts[activeUser].messages"
-                        class="message"
-                        :class="message.status">
-                        {{ message.message }}
+                        <div v-for="(message, status) in contacts[activeUser].messages" class="message"
+                            :class="message.status">
+                            {{ message.message }}
                             <span class="message__date">{{message.date}}</span>
                         </div>
                     </div>
